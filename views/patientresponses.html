@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Patient Responses</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<meta charset="UTF-8">
+</head>
+<body class="testtable">
+<nav class="navbar navbar-light bg-light">
+<ul class="nav justify-content-end">
+  <li class="nav-item liitem" style="font-size:20px">
+	<form method="POST" action="/admin/home">
+   <button type="submit" class="btn btn-primary" name ="submit" value="home">Home</button>
+   </form>
+  </li>
+  <li class="nav-item liitem" style="font-size:20px">
+	<form method="post" action="/admin/logout">
+     <button type="submit" class="btn btn-primary" name ="submit" value="logout">Log Out</button>
+       </form>
+  </li>
+</ul>
+<h3 class="heading">Patient Responses</h3>
+<table class="table table-bordered patient">
+  <thead>
+    <tr>
+      <th scope="col">Username</th>
+      <th scope="col">Question 1</th>
+      <th scope="col">Response</th>
+      <th scope="col">Question 2</th>
+      <th scope="col">Response</th>
+      <th scope="col">Question 3</th>
+      <th scope="col">Response</th>
+      <th scope="col">Question 4</th>
+      <th scope="col">Response</th>
+      <th scope="col">Question 5</th>
+      <th scope="col">Response</th>
+      <th scope="col">Question 6</th>
+      <th scope="col">Response</th>
+      <th scope="col">Question 7</th>
+      <th scope="col">Response</th>
+      <th scope="col">Question 8</th>
+      <th scope="col">Response</th>
+      <th scope="col">Question 9</th>
+     <th scope="col">Response</th>
+      <th scope="col">Question 10</th>
+      <th scope="col">Response</th>
+      <th scope="col">Total</th>
+    </tr>
+  </thead>
+</table>
+<script>
+
+
+//'buttons':['copy','csv','excel','pdf','print'] */\
+
+$(document).ready(function() {
+	
+    $('.patient').DataTable( {
+    	ajax: {
+    		"type":"POST",
+    		"url":"http://ec2-18-221-45-243.us-east-2.compute.amazonaws.com:9000/userresponses" + "?username=" + username,
+    		 headers:{'Authorization':tokenValue},	
+    		 },
+    		 columns:[
+    	    		{
+    	            "data" : "username"
+    	        },{
+    	            "data" : "Q1"
+    	        }, {
+    	            "data" : "Q1Value"
+    	        },{
+    	            "data" : "Q2"
+    	        }, {
+    	            "data" : "Q2Value"
+    	        },{
+    	            "data" : "Q3"
+    	        }, {
+    	            "data" : "Q3Value"
+    	        },{
+    	            "data" : "Q4"
+    	        },{
+    	            "data" : "Q4Value"
+    	        },{
+    	            "data" : "Q5"
+    	        },{
+    	            "data" : "Q5Value"
+    	        },{
+    	            "data" : "Q6"
+    	        },{
+    	            "data" : "Q6Value"
+    	        },{
+    	            "data" : "Q7"
+    	        },{
+    	            "data" : "Q7Value"
+    	        },{
+    	            "data" : "Q8"
+    	        },{
+    	            "data" : "Q8Value"
+    	        },{
+    	            "data" : "Q9"
+    	        },{
+    	            "data" : "Q9Value"
+    	        },{
+    	            "data" : "Q10"
+    	        },{
+    	            "data" : "Q10Value"
+    	        },{
+    	            "data" : "TOTAL"
+    	        }
+    	        ],
+        dom: 'Bfrtip',
+        buttons: [
+            'print'
+        ]
+    });
+});
+</script>
+</nav>
+</body>
+</html>

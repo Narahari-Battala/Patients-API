@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Patient List</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<script>
+</script>
+</head>
+<body class="testtable">
+<nav class="navbar navbar-light bg-light">
+<ul class="nav justify-content-end">
+  <li class="nav-item liitem" style="font-size:20px">
+    <form method="POST" action="/admin/home">
+   <button type="submit" class="btn btn-primary" name ="submit" value="home">Home</button>
+   </form>
+  </li>
+  <li class="nav-item liitem" style="font-size:20px">
+    <form method="post" action="/admin/logout">
+     <button type="submit" class="btn btn-primary" name ="submit" value="logout">Log Out</button>
+       </form>
+  </li>
+</ul>
+<h3 class="heading">Patients List</h3>
+<table class="table table-bordered patient">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Address</th>
+      <th scope="col">Password</th>
+      <th scope="col">See Responses</th>
+    </tr>
+  </thead>
+</table>
+<script>
+
+$(document).ready(function() {
+    $('.patient').DataTable( {
+    	ajax: {
+            "url":"http://ec2-18-221-45-243.us-east-2.compute.amazonaws.com:9000/userslist",
+    		 headers:{'Authorization':tokenValue},	
+    	},
+    	columns:[  {
+            "data" : "name"
+        }, {
+            "data" : "username"
+        }, {
+            "data" : "address"
+        }, {
+            "data" : "passw"
+        },{
+            "data" : "age"
+        }
+        ],
+        "fnRowCallback": function( nRow, aData, iDisplayIndex ) {
+            $('td:eq(4)', nRow).html(' <form method="post" action="/admin/patientresponse">' + '<button type="submit" class="btn btn-primary" name ="submit" value="getuserresponse">' +
+                'See Responses' + '</button>'  + '</form>');
+            return nRow;
+        },	
+        dom: 'Bfrtip',
+        buttons: [
+            'print'
+        ]
+    });
+    
+    var table = $('.patient').DataTable();
+    $('.patient tbody').on('click', 'tr', function () {
+        var data = table.row(this).data();
+        var request=new XMLHttpRequest();
+        var url = window.location.origin;
+        request.open("POST", url + "/admin/patientresponse?user="+data.username , true);
+        request.send();
+    });
+    
+});
+</script>
+</nav>
+</body>
+</html>

@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+ul li+li:before {
+	padding: 8px;
+	margin-left: 40px !important;
+}
+
+.test{
+	text-align:center;
+	margin-top:30vh;
+	/* background: url("../images/fimg.jpg") no-repeat; */
+	width:100%;
+	height:100vh;
+}
+
+.bg{
+	text-align:center;
+}
+
+.patient{
+	
+	margin-top:40vh;
+	padding:20px;
+}
+
+.heading{
+	text-align:center;
+}
+
+.testtable{
+	text-align:center;
+	margin-top:5vh;
+	background: url("../images/fimg.jpg") no-repeat;
+}
+
+.liitem{
+	
+	margin-top:5vh;
+}
