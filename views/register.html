@@ -82,12 +82,12 @@ button:hover {
 <nav class="navbar navbar-light bg-light">
  <ul class="nav justify-content-end">
   <li class="nav-item liitem" style="font-size:20px">
-    <form method="POST" action="/admin/home">
+    <form action="/admin/home">
         <button type="submit" class="btn btn-primary" id ="submit" name ="submit" value="home">Home</button>
         </form>
   </li>
   <li class="nav-item liitem" style="font-size:20px">
-    <form method="post" action="/admin/logout">
+    <form action="/admin/logout">
      <button type="submit" class="btn btn-primary" name ="submit" value="logout">Log Out</button>
      </form>
   </li>
@@ -107,8 +107,8 @@ button:hover {
     <button type="submit" class="signupbtn" name="submit" value="signup">Register</button>
     </form>
     <div class="clearfix">
-    <form method ="post" action="/admin/home">
-      <button type="submit" class="cancelbtn" name="submit" value="cancel">Cancel</button>
+    <form method ="get" action="/admin/home">
+      <button type="submit" class="cancelbtn" name="submit" value="home">Cancel</button>
      </form>
     </div>
     </nav>

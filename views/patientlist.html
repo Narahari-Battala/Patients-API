@@ -12,12 +12,12 @@
 <nav class="navbar navbar-light bg-light">
 <ul class="nav justify-content-end">
   <li class="nav-item liitem" style="font-size:20px">
-    <form method="POST" action="/admin/home">
+    <form action="/admin/home">
    <button type="submit" class="btn btn-primary" name ="submit" value="home">Home</button>
    </form>
   </li>
   <li class="nav-item liitem" style="font-size:20px">
-    <form method="post" action="/admin/logout">
+    <form action="/admin/logout">
      <button type="submit" class="btn btn-primary" name ="submit" value="logout">Log Out</button>
        </form>
   </li>
@@ -40,6 +40,7 @@ $(document).ready(function() {
     $('.patient').DataTable( {
     	ajax: {
             "url":"http://ec2-18-221-45-243.us-east-2.compute.amazonaws.com:9000/userslist",
+            //"url": "http://localhost:4000/userslist",
     		 headers:{'Authorization':tokenValue},	
     	},
     	columns:[  {
@@ -55,7 +56,7 @@ $(document).ready(function() {
         }
         ],
         "fnRowCallback": function( nRow, aData, iDisplayIndex ) {
-            $('td:eq(4)', nRow).html(' <form method="post" action="/admin/patientresponse">' + '<button type="submit" class="btn btn-primary" name ="submit" value="getuserresponse">' +
+            $('td:eq(4)', nRow).html(' <form action="/admin/patientresponse">' + '<button type="submit" class="btn btn-primary" name ="submit" value="getuserresponse">' +
                 'See Responses' + '</button>'  + '</form>');
             return nRow;
         },	
@@ -70,7 +71,7 @@ $(document).ready(function() {
         var data = table.row(this).data();
         var request=new XMLHttpRequest();
         var url = window.location.origin;
-        request.open("POST", url + "/admin/patientresponse?user="+data.username , true);
+        request.open("GET", url + "/admin/patientresponse?user="+data.username , true);
         request.send();
     });
     
