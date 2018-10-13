@@ -18,7 +18,7 @@ Audit : https://github.com/Narahari-Battala/Patients-API/blob/master/Audit.pdf
 >2. [body-parser](https://www.npmjs.com/package/body-parser) 
 >3. [cookie-parser](https://www.npmjs.com/package/cookie-parser)
 >4. [morgan](https://www.npmjs.com/package/morgan)
->5. [http-errors](https://www.npmjs.com/package/http-errors) - mysql database
+>5. [http-errors](https://www.npmjs.com/package/http-errors)
 
 This Application has 3 parts
 
