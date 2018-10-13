@@ -4,6 +4,8 @@ Patient AUDIT (Alcohol Use Disorders Identification Test) application is to iden
 patterns of alcohol consumption. The AUDIT was developed by WHO as a simple method of screening for excessive drinking and 
 assist patients.
 
+Audit : https://github.com/Narahari-Battala/Patients-API/blob/master/Audit.pdf
+
 This Application has 3 parts
 
 ### API:
