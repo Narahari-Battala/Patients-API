@@ -57,3 +57,8 @@ All the user responses should be stored on the server and all communication with
 https://github.com/Narahari-Battala/Patients-API/blob/master/mobileapp_screencast.mov
 
 
+### Postman Collection:
+
+https://github.com/Narahari-Battala/Patients-API/blob/master/Postman%20Collection
+
+
