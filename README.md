@@ -48,5 +48,7 @@ Mobile app presents the survey questions in the survey provided in the below lin
 
 All the user responses should be stored on the server and all communication with the server is enabled through the API.
 
-	
+Mobile App Screen cast: 
+
+https://github.com/Narahari-Battala/Patients-API/blob/master/mobileapp_screencast.mov
 
