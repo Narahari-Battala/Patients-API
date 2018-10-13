@@ -7,21 +7,25 @@ assist patients.
 Audit : https://github.com/Narahari-Battala/Patients-API/blob/master/Audit.pdf
 
 ## Requirement ##
-* [MongoDB](https://www.mongodb.com/) - Database
 * [Expressjs](http://expressjs.com/zh-tw/) - API Server
 * [Nodejs](https://nodejs.org/en/) - Backend Framework
 * [NPM](https://www.npmjs.com/) - Package Management
+* [Jade](http://jade-lang.com/) - Template Engine
+* [Jquery](https://jquery.com/) - Jquery
 
 ## Packages ##
->1. [Mongoose](http://mongoosejs.com/) - mongodb object modeling
->2. [body-parser](https://www.npmjs.com/package/body-parser) - http request body parser.
+>1. [mysql](https://www.npmjs.com/package/mysql)
+>2. [body-parser](https://www.npmjs.com/package/body-parser) 
+>3. [cookie-parser](https://www.npmjs.com/package/cookie-parser)
+>4. [morgan](https://www.npmjs.com/package/morgan)
+>5. [http-errors](https://www.npmjs.com/package/http-errors) - mysql database
 
 This Application has 3 parts
 
 ### API:
 
 API handles the Authentication, Authorization , patient responses, patient login, patient registration and patient lists. 
-I have used JWT (JSON Web Tokens) for Authentication and Authorization. I have used node js , Express, SQL, body parser for 
+I have used JWT (JSON Web Tokens) for Authentication and Authorization. I have used node js , Express, MySQL, body parser for 
 developing this API.
 
 
