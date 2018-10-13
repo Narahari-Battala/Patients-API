@@ -1,0 +1,299 @@
+{
+	"info": {
+		"_postman_id": "ddd321c3-c43e-444e-8ba7-67d33da04b6f",
+		"name": "Advaced MAD HospitalSurveyApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "adminadd",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hcmFoYXJpOTMiLCJuYW1lIjoiTmFyYWhhcmkiLCJwYXNzdyI6IjEyMzQ1IiwiaWF0IjoxNTM2NzkzOTQ1LCJleHAiOjE1MzY3OTg5NDV9._5XZWfWMVt4r_TkjBJHHxDEFy4hGera7-x-AkGaUd6Y"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"udaya67\",\r\n     \"name\":\"udaya\",\r\n     \"age\":\"55\",\r\n     \"weight\":\"70\",\r\n     \"address\":\"Charlotte\",\r\n     \"password\":\"666555\"\r\n}"
+				},
+				"url": {
+					"raw": "http://ec2-18-221-45-243.us-east-2.compute.amazonaws.com:7000/adminadd",
+					"protocol": "http",
+					"host": [
+						"ec2-18-221-45-243.us-east-2.compute.amazonaws.com"
+					],
+					"port": "7000",
+					"path": [
+						"adminadd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hcmFoYXJpOTMiLCJuYW1lIjoiTmFyYWhhcmkiLCJwYXNzdyI6IjEyMzQ1IiwiaWF0IjoxNTM2NzkzOTQ1LCJleHAiOjE1MzY3OTg5NDV9._5XZWfWMVt4r_TkjBJHHxDEFy4hGera7-x-AkGaUd6Y",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"udaya67\",\r\n     \"password\":\"666555\"\r\n}"
+				},
+				"url": {
+					"raw": "http://ec2-18-221-45-243.us-east-2.compute.amazonaws.com:7000/login",
+					"protocol": "http",
+					"host": [
+						"ec2-18-221-45-243.us-east-2.compute.amazonaws.com"
+					],
+					"port": "7000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVkYXlhNjciLCJuYW1lIjoidWRheWEiLCJhZ2UiOjU1LCJ3ZWlnaHQiOiI3MCIsImFkZHJlc3MiOiJDaGFybG90dGUiLCJwYXNzdyI6IjY2NjU1NSIsImlhdCI6MTUzNjc5NDI2NSwiZXhwIjoxNTM2Nzk5MjY1fQ.f3-wDbOOwdcR-UYomBd0MD9PVYAXtjcbCBRXoPC3scQ"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\t\"name\":\"udayakumar\",\r\n\t\"age\":\"60\",\r\n\t\"weight\":\"75\"\r\n\t }"
+				},
+				"url": {
+					"raw": "http://ec2-18-221-45-243.us-east-2.compute.amazonaws.com:7000/users",
+					"protocol": "http",
+					"host": [
+						"ec2-18-221-45-243.us-east-2.compute.amazonaws.com"
+					],
+					"port": "7000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVkYXlhNjciLCJuYW1lIjoidWRheWEiLCJhZ2UiOjU1LCJ3ZWlnaHQiOiI3MCIsImFkZHJlc3MiOiJDaGFybG90dGUiLCJwYXNzdyI6IjY2NjU1NSIsImlhdCI6MTUzNjc5NDI2NSwiZXhwIjoxNTM2Nzk5MjY1fQ.f3-wDbOOwdcR-UYomBd0MD9PVYAXtjcbCBRXoPC3scQ"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\t\"name\":\"udayakumar\",\r\n\t\"age\":\"60\",\r\n\t\"weight\":\"75\"\r\n\t }"
+				},
+				"url": {
+					"raw": "http://ec2-18-221-45-243.us-east-2.compute.amazonaws.com:7000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "store user answers",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVkYXlhNjciLCJuYW1lIjoidWRheWEiLCJhZ2UiOjU1LCJ3ZWlnaHQiOiI3MCIsImFkZHJlc3MiOiJDaGFybG90dGUiLCJwYXNzdyI6IjY2NjU1NSIsImlhdCI6MTUzNjc5NDI2NSwiZXhwIjoxNTM2Nzk5MjY1fQ.f3-wDbOOwdcR-UYomBd0MD9PVYAXtjcbCBRXoPC3scQ"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"q1\":\"Question1\",\r\n\"q1value\":\"Answer1\",\r\n\"q2\":\"Question2\",\r\n\"q2value\":\"Answer2\",\r\n\"q3\":\"Question3\",\r\n\"q3value\":\"Answer3\",\r\n\"q4\":\"Question4\",\r\n\"q4value\":\"Answer4\",\r\n\"q5\":\"Question5\",\r\n\"q5value\":\"Answer5\",\r\n\"q6\":\"Question6\",\r\n\"q6value\":\"Answer6\",\r\n\"q7\":\"Question7\",\r\n\"q7value\":\"Answer7\",\r\n\"q8\":\"Question8\",\r\n\"q8value\":\"Answer8\",\r\n\"q9\":\"Question9\",\r\n\"q9value\":\"Answer9\",\r\n\"q10\":\"Question10\",\r\n\"q10value\":\"Answer10\",\r\n\"total\":\"35\"\r\n}"
+				},
+				"url": {
+					"raw": "http://ec2-18-221-45-243.us-east-2.compute.amazonaws.com:7000/userresponse",
+					"protocol": "http",
+					"host": [
+						"ec2-18-221-45-243.us-east-2.compute.amazonaws.com"
+					],
+					"port": "7000",
+					"path": [
+						"userresponse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user answers",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVkYXlhNjciLCJuYW1lIjoidWRheWEiLCJhZ2UiOjU1LCJ3ZWlnaHQiOiI3MCIsImFkZHJlc3MiOiJDaGFybG90dGUiLCJwYXNzdyI6IjY2NjU1NSIsImlhdCI6MTUzNjc5NDI2NSwiZXhwIjoxNTM2Nzk5MjY1fQ.f3-wDbOOwdcR-UYomBd0MD9PVYAXtjcbCBRXoPC3scQ"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"username\":\"udaya67\"\r\n\r\n\t\r\n}"
+				},
+				"url": {
+					"raw": "http://ec2-18-221-45-243.us-east-2.compute.amazonaws.com:7000/userresponses",
+					"protocol": "http",
+					"host": [
+						"ec2-18-221-45-243.us-east-2.compute.amazonaws.com"
+					],
+					"port": "7000",
+					"path": [
+						"userresponses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "responses",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVkYXlhNjciLCJuYW1lIjoidWRheWEiLCJhZ2UiOjU1LCJ3ZWlnaHQiOiI3MCIsImFkZHJlc3MiOiJDaGFybG90dGUiLCJwYXNzdyI6IjY2NjU1NSIsImlhdCI6MTUzNjc5NDI2NSwiZXhwIjoxNTM2Nzk5MjY1fQ.f3-wDbOOwdcR-UYomBd0MD9PVYAXtjcbCBRXoPC3scQ"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"username\":\"udaya67\"\r\n\r\n\t\r\n}"
+				},
+				"url": {
+					"raw": "http://ec2-18-221-45-243.us-east-2.compute.amazonaws.com:7000/responses",
+					"protocol": "http",
+					"host": [
+						"ec2-18-221-45-243.us-east-2.compute.amazonaws.com"
+					],
+					"port": "7000",
+					"path": [
+						"responses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all responses",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVkYXlhNjciLCJuYW1lIjoidWRheWEiLCJhZ2UiOjU1LCJ3ZWlnaHQiOiI3MCIsImFkZHJlc3MiOiJDaGFybG90dGUiLCJwYXNzdyI6IjY2NjU1NSIsImlhdCI6MTUzNjc5NDI2NSwiZXhwIjoxNTM2Nzk5MjY1fQ.f3-wDbOOwdcR-UYomBd0MD9PVYAXtjcbCBRXoPC3scQ"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"username\":\"udaya67\"\r\n\r\n\t\r\n}"
+				},
+				"url": {
+					"raw": "http://ec2-18-221-45-243.us-east-2.compute.amazonaws.com:7000/responses",
+					"protocol": "http",
+					"host": [
+						"ec2-18-221-45-243.us-east-2.compute.amazonaws.com"
+					],
+					"port": "7000",
+					"path": [
+						"responses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVkYXlhNjciLCJuYW1lIjoidWRheWEiLCJhZ2UiOjU1LCJ3ZWlnaHQiOiI3MCIsImFkZHJlc3MiOiJDaGFybG90dGUiLCJwYXNzdyI6IjY2NjU1NSIsImlhdCI6MTUzNjc5NDI2NSwiZXhwIjoxNTM2Nzk5MjY1fQ.f3-wDbOOwdcR-UYomBd0MD9PVYAXtjcbCBRXoPC3scQ",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"narahari93\",\r\n     \"password\":\"12345\"\r\n}"
+				},
+				"url": {
+					"raw": "http://ec2-18-221-45-243.us-east-2.compute.amazonaws.com:7000/admin",
+					"protocol": "http",
+					"host": [
+						"ec2-18-221-45-243.us-east-2.compute.amazonaws.com"
+					],
+					"port": "7000",
+					"path": [
+						"admin"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
